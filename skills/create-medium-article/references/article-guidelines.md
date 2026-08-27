@@ -36,9 +36,27 @@ than an exhaustive article assembled from every available source.
 
 ## Titles
 
-Create tension or curiosity through a real consequence, constraint, mistake,
-or decision. Keep the promise honest. Avoid vague introductions, unsupported
-superlatives, and listicle framing that the article does not deliver.
+Treat the title and deck as a single distribution package. After the argument
+is stable, draft materially different options and choose the one that lets the
+intended reader understand the payoff at a glance.
+
+Effective title shapes include:
+
+- a direct how-to tied to a concrete outcome;
+- a consequential claim or recognizable mistake;
+- a question that exposes a real decision or gap;
+- a number or sequence when the article genuinely delivers it;
+- a year or timely reference when the material is actually time-bound.
+
+Use concrete nouns, active verbs, and conversational syntax. Let the deck add
+useful precision instead of repeating the title. Read the package as it would
+appear beside competing headlines: if the title could fit dozens of unrelated
+articles, sharpen the audience, outcome, constraint, or consequence.
+
+Keep the promise honest. Never invent numbers, dates, credentials, outcomes,
+superlatives, urgency, or tool names to make a headline more clickable. Do not
+copy a successful title formula when it distorts the article. The article must
+deliver the exact promise the title makes.
 
 ## Repetition
 

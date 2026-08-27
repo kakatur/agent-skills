@@ -13,6 +13,9 @@ designed to be read on a page.
 
 ## Improve
 
+- Read the title and subtitle as a package. When they are accurate but bland,
+  abstract, or repetitive, sharpen the reader payoff or consequence without
+  changing the article's promise or inventing specificity.
 - Open with a concrete situation, question, observation, or failure the reader
   can recognize.
 - Prefer familiar words and direct sentences when meaning stays intact.
@@ -44,3 +47,5 @@ clearest accurate choice in context.
 
 Read once for natural flow and once for semantic drift. Confirm that editing
 did not alter code, links, attribution, qualifications, or factual scope.
+Confirm that the article delivers the title's promise and that the title adds
+no unsupported numbers, dates, authority, urgency, or outcomes.
