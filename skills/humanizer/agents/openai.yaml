@@ -1,0 +1,7 @@
+interface:
+  display_name: "Humanizer"
+  short_description: "Polish written prose or spoken narration"
+  default_prompt: "Use $humanizer to polish this draft while preserving its facts, technical meaning, and author voice."
+
+policy:
+  allow_implicit_invocation: true
