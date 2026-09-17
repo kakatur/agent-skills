@@ -1,0 +1,7 @@
+interface:
+  display_name: "Technical Documentation"
+  short_description: "Write clear Confluence pages and Git READMEs"
+  default_prompt: "Use $technical-documentation to create or revise this Confluence page or Git README using verified project sources."
+
+policy:
+  allow_implicit_invocation: true

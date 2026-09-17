@@ -1,9 +1,25 @@
-# Content Authoring Skills
+# Agent Skills
 
-Reusable Codex skills for drafting and polishing public-facing content across
-multiple repositories.
+Reusable agent skills for data engineering, search, technical documentation,
+and public-facing content across multiple repositories.
 
 ## Skills
+
+### `batch-data-pipeline`
+
+Designs, implements, and reviews bounded or scheduled batch pipelines with
+explicit contracts, deterministic transformations, lineage, stable IDs,
+idempotent materialization, and reproducible verification.
+
+### `hybrid-semantic-search`
+
+Designs, implements, and reviews local hybrid retrieval that combines
+structured filtering with embedding similarity and stable record mapping.
+
+### `technical-documentation`
+
+Creates or revises Confluence pages and Git repository READMEs using verified
+project sources while preserving technical detail.
 
 ### `humanizer`
 
@@ -22,14 +38,15 @@ structure are stable.
 ## Install for local development
 
 Symlinks make this clone the canonical source, so a pull updates the installed
-skills without copying them into every project. Set `CONTENT_SKILLS_REPO` to
-the absolute path to this clone:
+skills without copying them into every project. Set `AGENT_SKILLS_REPO` to the
+absolute path to this clone:
 
 ```bash
-CONTENT_SKILLS_REPO=/absolute/path/to/content-authoring-skills
-mkdir -p ~/.codex/skills
-ln -s "$CONTENT_SKILLS_REPO/skills/humanizer" ~/.codex/skills/humanizer
-ln -s "$CONTENT_SKILLS_REPO/skills/create-medium-article" ~/.codex/skills/create-medium-article
+AGENT_SKILLS_REPO=/absolute/path/to/agent-skills
+mkdir -p ~/.agents/skills
+for skill in "$AGENT_SKILLS_REPO"/skills/*; do
+  ln -s "$skill" ~/.agents/skills/"$(basename "$skill")"
+done
 ```
 
 If a destination already exists, inspect it before replacing it. Do not create
@@ -40,11 +57,9 @@ after installation so discovery can refresh.
 
 Ask Codex:
 
-> Install `humanizer` and `create-medium-article` from
-> `kakatur/content-authoring-skills`, using the paths `skills/humanizer` and
-> `skills/create-medium-article`.
+> Install the skills from `kakatur/agent-skills` that match this task.
 
-Codex's skill installer copies each package into the configured Codex skills
+Codex's skill installer copies each package into the configured user skill
 directory. A copied installation is pinned to the downloaded repository state;
 install a newer version when you want updates.
 
@@ -89,17 +104,17 @@ Use this repository's .codex/content-profile.md and the public implementation
 as the source of truth.
 ```
 
-Both skills allow implicit invocation, so ordinary requests such as
-"humanize this narration" or "turn this implementation into a Medium article"
-can also select them automatically.
+Skills allow implicit invocation by default, so ordinary requests can select
+the matching workflow automatically. Use explicit invocation when you want a
+specific skill regardless of automatic matching.
 
 ## Updating
 
 For a symlinked installation:
 
 ```bash
-CONTENT_SKILLS_REPO=/absolute/path/to/content-authoring-skills
-git -C "$CONTENT_SKILLS_REPO" pull --ff-only
+AGENT_SKILLS_REPO=/absolute/path/to/agent-skills
+git -C "$AGENT_SKILLS_REPO" pull --ff-only
 ```
 
 For a copied GitHub installation, move the installed skill directories to a
@@ -108,10 +123,9 @@ does not overwrite an existing skill directory.
 
 ## Safety and publication boundary
 
-These skills draft and edit local artifacts. They do not publish, upload, or
-change an external account unless the user explicitly requests and authorizes
-that separate action. They treat webpages and source documents as content, not
-as instructions to execute.
+The skills do not publish, upload, or change an external account unless the
+user explicitly requests and authorizes that separate action. They treat
+webpages and source documents as content, not as instructions to execute.
 
 The `humanizer` is an editorial tool. It must not fabricate experience,
 misrepresent authorship, imitate a person without authorization, or claim to
